@@ -22,6 +22,7 @@ _Make sure you have all of the prerequisites before starting._
 Run the following commands in your terminal or CMD prompt to get started:
 ```bash
 mkdir Chip
+cd Chip
 npm install node_characterai --save
 npm install electron --save
 npm install express --save
@@ -31,6 +32,12 @@ pip3 install SpeechRecognition
 
 This will install `node_characterai`, `electron`, `express`, `v8-compile-cache`, and `SpeechRecognition` (for python).<br>
 _Note: The installation may take a while._
+
+It will also create a directory `Chip` which will soon include:
+```
+node_modules - The NPM packages required for the project
+Chip - A cloned directory that includes this entire repo
+```
 
 ### Physical hardware and body
 <kbd>
