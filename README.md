@@ -66,9 +66,13 @@ The software is easy to set up.
 3. Go into the directory via GUI or CLI
 4. In the current folder, open your text editor and go to Chip.js line 82
 5. Change `play` in `run("play ...")` to whatever command your system uses to play audio files
-6. Still in the same folder, run this command (see [this](#prerequisites)):<br>
+6. Now run this command in the same folder (for electron):
+   ```bash
+   $ echo '{"name":"chip","version":"1.0.0","description":"","main":"Chip.js","scripts":{"test":"electron ."},"repository":{"type":"git","url":""},"keywords":[],"author":"","license":"ISC","bugs":{"url":""},"homepage":""' > package.json && npm init -y
+   ```
+8. Still in the same folder, run this command (see [this](#prerequisites)):<br>
    `$ npm test`
-7. Chip should be active and you should see two blinking eyes.
+9. Chip should be active and you should see two blinking eyes.
 
 _There are still a couple more steps!_
 
