@@ -39,6 +39,8 @@ node_modules - The NPM packages required for the project
 Chip - A cloned directory that includes this entire repo
 ```
 
+Once the installation finishes, head over to the [Software setup](#software-setup) section to quickly set up the bot.
+
 ### Physical hardware and body
 <kbd>
   <img src="https://github.com/Parking-Master/Chip/assets/88283567/34a6f3b9-7f76-487c-a3a9-cdc7996bd386" alt="3D version of Chip">
