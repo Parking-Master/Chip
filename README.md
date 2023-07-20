@@ -25,7 +25,11 @@ mkdir Chip
 npm install node_characterai --save
 npm install electron --save
 npm install express --save
+pip3 install SpeechRecognition
 ```
+
+This will install `node_characterai`, `electron`, `express`, and `SpeechRecognition` (for python).<br>
+_Note: The installation may take a while._
 
 ### Physical hardware and body
 <kbd>
