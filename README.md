@@ -5,6 +5,8 @@ Chip is a personal AI desk robot powered by Character.AI and Node.js.
 As in the description, this is a __personal__ project for myself. I made it public though for anyone else who would like to try this project.
 
 ### Prerequisites
+- A play.ht account
+- A Character.AI account
 - A speaker
 - A microphone
 - 2 Computers with either Linux, Windows or MacOS
@@ -92,6 +94,15 @@ The host computer's script (Host.js) should also host a server on port 2876 or 2
 <kbd>/ask</kbd> - A simple page to talk to the bot directly<br>
 <kbd>/</kbd> - Send a parameter (`?q=This is my text!`) (same as `/ask` but without GUI)<br>
 <kbd>/retrieve/speak</kbd> - Send a parameter (`?q=AI speech`) to generate speech
+
+Finally, you need to provide your play.ht and Character.AI auth tokens (for AI speech and chat).
+1. Go to your host's computer
+2. See [these docs](https://github.com/realcoloride/node_characterai#using-an-access-token) to get your auth token for Character.AI
+3. Go to "Host.js" line 8 and replace "YOUR_CHARACTERAI_AUTHTOKEN" with the token you have now.
+4. Now on the same file, go to line 37 and replace "YOUR_PLAYHT_APIKEY" with your play.ht API key
+5. Still on line 37, also replace "YOUR_PLAYHT_USERID" with your play.ht User ID.
+
+You can get both of the play.ht tokens from [here](https://play.ht/app/api-access).
 
 That's it! If everything was successful, then you just built a physical AI robot!
 
