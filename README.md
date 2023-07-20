@@ -57,7 +57,7 @@ The software is easy to set up.
 2. Run this command in your terminal or CMD prompt (replace "{YourUsername}" with your name):<br>
    `$ git clone https://github.com/{YourUsername}/Chip`
 3. Go into the directory via GUI or CLI
-4. In the current folder, open your text editor and go to Chip.js line 73
+4. In the current folder, open your text editor and go to Chip.js line 82
 5. Change `play` in `run("play ...")` to whatever command your system uses to play audio files
 6. Still in the same folder, run this command (see [this](#prerequisites)):<br>
    `$ npm test`
@@ -68,4 +68,44 @@ _There are still a couple more steps!_
 #### AI and voice host
 Since my Raspberry Pi Zero is too slow to run `node_characterai` or generate AI speech, I host those two things on a _different_ computer and let the pi easily access it.
 
-If you think your computer can handle everything on it's own, go to Chip.js line 36 and change `HOST` to "localhost".
+If you think your computer can handle everything on it's own, go to Chip.js line 36 and change "YOUR_HOST_IP to "localhost".
+
+If you would like to run on two seperate computers, upload the Host.js file to the host computer and run:
+```bash
+$ node Host.js
+```
+
+Then on the client computer (running Chip.js, not Host.js), open your text editor and go to Chip.js line 36, and change "YOUR_HOST_IP" to the host computer's IPv4 address (no port included, just the IP).
+
+Finally, after the host's server is running, go to the client computer and start Chip.js with:
+```bash
+$ npm test
+```
+
+Run the same command when _hosting the server on the same computer_ as well.
+
+#### Web server host
+If your client (Chip.js) is running on Linux (Debian, Ubuntu, etc.) you can go to its IP address on port 2876 or 2877 and monitor the CPU temperature while running. With nothing running in the background except the terminal and the script, the CPU temperature should be around 95&#176;F - 130&#176;F.
+
+The host computer's script (Host.js) should also host a server on port 2876 or 2877 with the following pages:
+
+<kbd>/ask</kbd> - A simple page to talk to the bot directly<br>
+<kbd>/</kbd> - Send a parameter (`?q=This is my text!`) (same as `/ask` but without GUI)<br>
+<kbd>/retrieve/speak</kbd> - Send a parameter (`?q=AI speech`) to generate speech
+
+That's it! If everything was successful, then you just built a physical AI robot!
+
+If something didn't work, report it in the "Issues" section and I'll respond!
+
+### Customization
+You can customize the face (in HTML form) in "face.html".
+
+You can customize any of the hardware to fit your style.
+
+You can customize Chip's sleep schedule in Chip.js line 64 (sleep) and 67 (wake).
+
+Here's my Chip (without the exterior):
+<kbd><img src="https://github.com/Parking-Master/Chip/assets/88283567/bd28ec0a-9aea-487f-b4ae-19147c4249d0"></kbd>
+
+# License
+MIT
