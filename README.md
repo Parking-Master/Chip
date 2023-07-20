@@ -88,23 +88,7 @@ $ node Host.js
 
 Then on the client computer (running Chip.js, not Host.js), open your text editor and go to Chip.js line 36, and change "YOUR_HOST_IP" to the host computer's IPv4 address (no port included, just the IP).
 
-Finally, after the host's server is running, go to the client computer and start Chip.js with:
-```bash
-$ npm test
-```
-
-Run the same command when _hosting the server on the same computer_ as well.
-
-#### Web server host
-If your client (Chip.js) is running on Linux (Debian, Ubuntu, etc.) you can go to its IP address on port 2876 or 2877 and monitor the CPU temperature while running. With nothing running in the background except the terminal and the script, the CPU temperature should be around 95&#176;F - 130&#176;F.
-
-The host computer's script (Host.js) should also host a server on port 2876 or 2877 with the following pages:
-
-<kbd>/ask</kbd> - A simple page to talk to the bot directly<br>
-<kbd>/</kbd> - Send a parameter (`?q=This is my text!`) (same as `/ask` but without GUI)<br>
-<kbd>/retrieve/speak</kbd> - Send a parameter (`?q=AI speech`) to generate speech
-
-Finally, you need to provide your play.ht and Character.AI auth tokens (for AI speech and chat).
+For the final steps of setup, you need to provide your play.ht and Character.AI auth tokens (for AI speech and chat).
 1. Go to your host's computer
 2. See [these docs](https://github.com/realcoloride/node_characterai#using-an-access-token) to get your auth token for Character.AI
 3. Go to "Host.js" line 8 and replace "YOUR_CHARACTERAI_AUTHTOKEN" with the token you have now.
@@ -113,9 +97,30 @@ Finally, you need to provide your play.ht and Character.AI auth tokens (for AI s
 
 You can get both of the play.ht tokens from [here](https://play.ht/app/api-access).
 
+Now to start the Chip.js script, use the following command on the client computer:
+```bash
+$ npm test
+```
+
+You should see 2 blinking eyes when the script starts. If you see this, and the script hasn't crashed, and the web server's pages are loading, then it is usually successful.
+
 That's it! If everything was successful, then you just built a physical AI robot!
 
 If something didn't work, report it in the "Issues" section and I'll respond!
+
+#### Local web server
+If your client (Chip.js) is running on Linux (Debian, Ubuntu, etc.) you can go to its IP address on port 2876 or 2877 and monitor the CPU temperature while running. With nothing running in the background except the terminal and the script, the CPU temperature should be around 95&#176;F - 130&#176;F.
+
+The host computer's script (Host.js) should also host a server on port 2876 or 2877 with the following pages:
+
+<kbd>/ask</kbd> - A simple page to talk to the bot directly<br>
+<kbd>/</kbd> - Send a parameter (`?q=This is my text!`) that will generate AI text<br>
+<kbd>/retrieve/speak</kbd> - Send a parameter (`?q=AI speech`) to generate speech
+
+And the client computer's script should be hosting the following pages on its IP address on port 2876 or 2877:
+
+<kbd>/cpu</kbd> - A page that returns the client's CPU temp (in farenheit)<br>
+<kbd>/speak</kbd> - Send a parameter (`?q=This is my text!`) to talk to the bot directly
 
 ### Customization
 You can customize the face (in HTML form) in "face.html".
