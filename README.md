@@ -49,7 +49,7 @@ Chip's "physical hardware" is about $30-$40 total. You can customize your own ha
 - MOGOOD USB 2.0 splitter cable ([$6.99](https://www.amazon.com/Splitter-MOGOOD-Extension-Charging-Multiport/dp/B098L7WJ4C))
 - Tkgou UM6 USB 2.0 gooseneck microphone ([$11.99](https://www.amazon.com/TKGOU-USB-PC-Microphone-Microphones/dp/B07D561S67/ref=sr_1_1?crid=1C0UFS5H6SZ7K&keywords=tkgou+um6&qid=1689864257&s=electronics&sprefix=tkgou+%2Celectronics%2C123&sr=1-1))
 - UCTRONICS 7" x 4" Touch screen monitor (mine was free because it was laying around the house, [$59.99](https://www.amazon.com/UCTRONICS-Raspberry-1024%C3%97600-Capacitive-Touchscreen/dp/B07VWDDWQ9/ref=sr_1_4?crid=TVLT65V3K4JQ&keywords=uctronics+touch+screen&qid=1689865374&s=electronics&sprefix=uctronics+touch+screen%2Celectronics%2C130&sr=1-4))
-- Raspberry Pi Zero 2 (W) with Headers kit by Vilros ([$50.00]([https://vilros.com/products/raspberry-pi-zero-2-w)](https://vilros.com/products/vilros-raspberry-pi-zero-2-w-basic-starter-kit)https://vilros.com/products/vilros-raspberry-pi-zero-2-w-basic-starter-kit))
+- Raspberry Pi Zero 2 (W) with Headers kit by Vilros ([$50.00](https://vilros.com/products/vilros-raspberry-pi-zero-2-w-basic-starter-kit))
 
 #### The following are parts I found around my home, their brand is unidentical:
 - 5" x 5" black computer cooling fan
