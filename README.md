@@ -34,7 +34,7 @@ _Note: The installation may take a while._
 
 ### Physical hardware and body
 <kbd>
-  <img src="https://github.com/Parking-Master/Chip/assets/88283567/55c3ccfd-ae6c-4102-9b84-1932a38e752b" alt="3D version of Chip">
+  <img src="https://github.com/Parking-Master/Chip/assets/88283567/34a6f3b9-7f76-487c-a3a9-cdc7996bd386" alt="3D version of Chip">
   <h2 align="center">A 3D version of Chip</h2>
 </kbd>
 
@@ -125,7 +125,7 @@ You can customize any of the hardware to fit your style.
 You can customize Chip's sleep schedule in Chip.js line 64 (sleep) and 67 (wake).
 
 Here's my Chip (without the exterior):
-<kbd><img src="https://github.com/Parking-Master/Chip/assets/88283567/bd28ec0a-9aea-487f-b4ae-19147c4249d0"></kbd>
+<kbd><img src="https://github.com/Parking-Master/Chip/assets/88283567/7ec24ff8-bd33-472d-97bd-036ba98f238c"></kbd>
 
 # License
 MIT
