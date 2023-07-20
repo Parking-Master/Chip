@@ -38,7 +38,10 @@ let PORT = 2876;
 let HOST_PORT = PORT;
 
 // Change port if the host and client are the same IP
-if (HOST == "localhost") PORT++;
+if (HOST == "localhost") {
+  PORT++;
+  run("node Host.js");
+}
 
 // Initialize UI
 if (face) app.on("ready", function() {
