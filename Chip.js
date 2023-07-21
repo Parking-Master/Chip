@@ -37,14 +37,14 @@ let HOST = "YOUR_HOST_IP";
 let PORT = 2876;
 let HOST_PORT = PORT;
 
-// Change port if the host and client are the same IP
+// Change port if the host and client are the same computer
 if (HOST == "localhost") {
   PORT++;
   let server = run("node Host.js");
   server.kill("SIGINT");
 }
 
-// Initialize UI
+// Initialize face
 if (face) app.on("ready", function() {
   app.commandLine.appendSwitch('enable-features', 'WebSpeechAPI');
   globalShortcut.register("CommandOrControl+X", () => {
@@ -69,7 +69,8 @@ setInterval(() => {
     if (sleep) sleep = false, run("xscreensaver-command -deactivate");
   }
 }, 10000);
- 
+
+// The `speak` function takes input and passes it to the Play.ht API for speech
 function speak(input) {
   input = input.replace(/\"/gi, "'");
   getScript(`http://${HOST}:${HOST_PORT}/retrieve/speak?q=${encodeURIComponent(input.trim())}`).then((url) => {
@@ -119,7 +120,6 @@ const getScript = (url) => {
     });
   });
 };
-
 
 (async () => {
   async function messanger(message) {
