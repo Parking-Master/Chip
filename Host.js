@@ -3,9 +3,13 @@ const CharacterAI = require("node_characterai");
 const characterAI = new CharacterAI();
 const run = require("child_process").exec;
 
+CHARACTERAI_AUTH_TOKEN = "YOUR_TOKEN_HERE";
+PLAYHT_SECRET_KEY = "YOUR_KEY_HERE";
+PLAYHT_USER_ID = "YOUR_ID_HERE";
+
 (async () => {
   try {
-    await characterAI.authenticateWithToken("YOUR_CHARACTERAI_AUTHTOKEN");
+    await characterAI.authenticateWithToken(CHARACTERAI_AUTH_TOKEN);
   } catch(err) {
     console.log(err);
   }
@@ -34,7 +38,7 @@ process.on("uncaughtException", (err) => {
 // Speak
 function TTS(text, callback) {
   text = text.trim().replace(/'/g, "").replace(/"/g, "");
-  run(`curl 'https://play.ht/api/v2/tts' -X POST -H "Content-Type: application/json" -H "accept: text/event-stream" -H 'AUTHORIZATION: Bearer YOUR_PLAYHT_APIKEY' -H 'X-USER-ID: YOUR_PLAYHT_USERID' --data-binary '{"text":"${text}","voice":"larry","quality":"premium","output_format":"mp3"}'`, function(err, result, output) {
+  run(`curl 'https://play.ht/api/v2/tts' -X POST -H "Content-Type: application/json" -H "accept: text/event-stream" -H 'AUTHORIZATION: Bearer ${PLAYHT_SECRET_KEY}' -H 'X-USER-ID: ${PLAYHT_USER_ID}' --data-binary '{"text":"${text}","voice":"larry","quality":"premium","output_format":"mp3"}'`, function(err, result, output) {
     if (err) throw err;
     let url = "https" + (result.trim().split("\n").reverse()[0].split("https")[1] || "").split("\"")[0];
     callback(url);
