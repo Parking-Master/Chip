@@ -73,11 +73,11 @@ The software is easy to set up.
 2. Run this command in your terminal or CMD prompt (replace "{YourUsername}" with your name):<br>
    `$ git clone https://github.com/{YourUsername}/Chip`
 3. Go into the directory via GUI or CLI
-4. In the current folder, open your text editor and go to Chip.js line 82
+4. In the current folder, open your text editor and go to Chip.js line 83
 5. Change `play` in `run("play ...")` to whatever command your system uses to play audio files
 6. Now run this command in the same folder (for electron):
    ```bash
-   $ echo '{"name":"chip","version":"1.0.0","description":"","main":"Chip.js","scripts":{"test":"electron ."},"repository":{"type":"git","url":""},"keywords":[],"author":"","license":"ISC","bugs":{"url":""},"homepage":""' > package.json && npm init -y
+   $ npm init -y; echo $(cat package.json | sed -r 's/echo/electron \./g') > package.json
    ```
 8. Still in the same folder, run this command (see [this](#prerequisites)):<br>
    `$ npm test`
