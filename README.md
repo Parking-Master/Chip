@@ -9,7 +9,7 @@ As in the description, this is a __personal__ project for myself. I made it publ
 - A Character.AI account
 - A speaker
 - A microphone
-- 2 Computers with either Linux, Windows or MacOS
+- Any computer with either Linux, Windows or MacOS
 - Node.js
 - NPM
 - ElectronJS
